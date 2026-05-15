@@ -1,0 +1,82 @@
+# 章节蓝图：built-environment.urban-culture-tourism
+# 标题级建议顺序，非全文模板。generate 与 business-plan 章节列表必须一致。
+
+schema_version: 1
+team_id: built-environment.urban-culture-tourism
+note: generate 默认映射 business-plan（同一 chapters）
+
+engagements:
+  business-plan:
+    description: 商业策划 / 定位与运营导向
+    chapters:
+      - 执行摘要
+      - 项目概况与目标
+      - 市场与客群分析
+      - 竞争与对标
+      - 定位与产品概念
+      - 空间与业态建议
+      - 运营模式与收入逻辑
+      - 投资与财务测算（摘要级）
+      - 政策与报建路径
+      - 风险与缓解措施
+      - 结论与下一步
+
+  generate:
+    description: 与 business-plan 同构（默认映射）
+    chapters:
+      - 执行摘要
+      - 项目概况与目标
+      - 市场与客群分析
+      - 竞争与对标
+      - 定位与产品概念
+      - 空间与业态建议
+      - 运营模式与收入逻辑
+      - 投资与财务测算（摘要级）
+      - 政策与报建路径
+      - 风险与缓解措施
+      - 结论与下一步
+
+  feasibility:
+    description: 可行性研究向（偏政府/投资决策）
+    chapters:
+      - 概述与编制依据
+      - 建设必要性与市场预测
+      - 场址与建设条件
+      - 工程与建设方案
+      - 节能与环保
+      - 组织机构与实施进度
+      - 投资估算与资金筹措
+      - 财务评价
+      - 社会稳定性风险分析
+      - 风险与结论建议
+
+  due-diligence:
+    description: 尽调 / 挑错与证据链
+    chapters:
+      - 范围与假设
+      - 市场与客户验证
+      - 政策与合规
+      - 资产与工程现状
+      - 运营与合同
+      - 财务与税务关注点
+      - 风险矩阵与建议条款
+
+  policy-memo:
+    description: 政策与合规备忘
+    chapters:
+      - 政策适用梳理
+      - 审批与报建路径
+      - 合规要点清单
+      - 风险与应对
+      - 结论与待办
+
+  remediation:
+    description: 已有报告研读与改造（见 docs/RUBRIC.md）
+    chapters:
+      - 文档类型与适用范围判定
+      - 执行摘要（结论与风险各 3–5 条，指向完整缺陷表）
+      - 完整缺陷表（P0–P3，条数不限；见 RUBRIC）
+      - 多维评分与门槛说明
+      - 修订计划（按优先级分批）
+      - 修订稿结构说明或修订后正文
+      - 变更说明（逐条对应缺陷 id）

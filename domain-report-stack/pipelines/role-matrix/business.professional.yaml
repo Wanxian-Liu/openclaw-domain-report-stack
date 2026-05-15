@@ -1,0 +1,103 @@
+# 角色执行顺序：business.professional
+# domain_deep 按 engagement 选用；remediation 仅对缺陷映射到的 role 重跑。
+
+schema_version: 1
+team_id: business.professional
+
+roles:
+  - id: scope_context
+    title: 范围与成功标准
+  - id: market_demand
+    title: 市场与客户
+  - id: strategy_offering
+    title: 战略与价值主张
+  - id: go_to_market
+    title: 商业化与增长
+  - id: operations_scaling
+    title: 运营与规模化
+  - id: financial_investment
+    title: 财务与资本
+  - id: risk_stakeholder
+    title: 风险与利益相关方
+
+engagement_order:
+  business-plan:
+    - scope_context
+    - market_demand
+    - strategy_offering
+    - go_to_market
+    - operations_scaling
+    - financial_investment
+    - risk_stakeholder
+
+  generate:
+    - scope_context
+    - market_demand
+    - strategy_offering
+    - go_to_market
+    - operations_scaling
+    - financial_investment
+    - risk_stakeholder
+
+  feasibility:
+    - scope_context
+    - market_demand
+    - strategy_offering
+    - operations_scaling
+    - financial_investment
+    - go_to_market
+    - risk_stakeholder
+
+  due-diligence:
+    - scope_context
+    - market_demand
+    - strategy_offering
+    - financial_investment
+    - go_to_market
+    - operations_scaling
+    - risk_stakeholder
+
+  policy-memo:
+    - risk_stakeholder
+    - strategy_offering
+    - scope_context
+    - market_demand
+
+  remediation:
+    note: 先产出缺陷表并按维度映射 role；仅对涉及维度调用对应 prompts，不必七帽全跑。
+
+domain_deep_waves:
+  business-plan:
+    - [scope_context]
+    - [market_demand, strategy_offering]
+    - [go_to_market, operations_scaling]
+    - [financial_investment, risk_stakeholder]
+
+  generate:
+    - [scope_context]
+    - [market_demand, strategy_offering]
+    - [go_to_market, operations_scaling]
+    - [financial_investment, risk_stakeholder]
+
+  feasibility:
+    - [scope_context]
+    - [market_demand]
+    - [strategy_offering]
+    - [operations_scaling]
+    - [financial_investment]
+    - [go_to_market]
+    - [risk_stakeholder]
+
+  due-diligence:
+    - [scope_context]
+    - [market_demand]
+    - [strategy_offering]
+    - [financial_investment]
+    - [go_to_market]
+    - [operations_scaling]
+    - [risk_stakeholder]
+
+  policy-memo:
+    - [risk_stakeholder]
+    - [strategy_offering]
+    - [scope_context, market_demand]

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://openclaw.local/domain-report-stack/project.meta.schema.json",
+  "title": "domain-report-stack project.meta.yaml",
+  "type": "object",
+  "required": ["team_id", "engagement"],
+  "additionalProperties": true,
+  "properties": {
+    "team_id": {
+      "type": "string",
+      "description": "Registered in domain-teams/_manifest/teams.json (exact match)"
+    },
+    "engagement": {
+      "type": "string",
+      "enum": [
+        "feasibility",
+        "business-plan",
+        "due-diligence",
+        "policy-memo",
+        "remediation",
+        "generate"
+      ],
+      "description": "generate = default full pipeline; remediation = repair existing report"
+    },
+    "project_name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "description": "Optional; copied to state.json project_slug"
+    }
+  }
+}

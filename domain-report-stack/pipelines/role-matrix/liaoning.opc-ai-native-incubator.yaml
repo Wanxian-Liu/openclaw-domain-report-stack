@@ -1,0 +1,111 @@
+# 角色矩阵：liaoning.opc-ai-native-incubator（8 帽）
+# domain_deep 按 wave 并联；remediation 按缺陷映射 role。
+
+schema_version: 1
+team_id: liaoning.opc-ai-native-incubator
+
+roles:
+  - id: scope_context
+    title: 愿景与边界
+  - id: gov_partnership_programs
+    title: 政府合作与政策工具
+  - id: platform_governance
+    title: 平台治理与入驻机制
+  - id: talent_labor_pipeline
+    title: 人才、实训与劳动合规
+  - id: ai_stack_compliance
+    title: AI 工具链与合规
+  - id: sector_playbooks
+    title: 多种 OPC 业态 playbook
+  - id: economics_finance
+    title: 商业可持续与资金节奏
+  - id: risk_stakeholder
+    title: 风险与利益相关方
+
+engagement_order:
+  business-plan:
+    - scope_context
+    - gov_partnership_programs
+    - platform_governance
+    - talent_labor_pipeline
+    - ai_stack_compliance
+    - sector_playbooks
+    - economics_finance
+    - risk_stakeholder
+
+  generate:
+    - scope_context
+    - gov_partnership_programs
+    - platform_governance
+    - talent_labor_pipeline
+    - ai_stack_compliance
+    - sector_playbooks
+    - economics_finance
+    - risk_stakeholder
+
+  feasibility:
+    - scope_context
+    - gov_partnership_programs
+    - platform_governance
+    - talent_labor_pipeline
+    - ai_stack_compliance
+    - sector_playbooks
+    - economics_finance
+    - risk_stakeholder
+
+  due-diligence:
+    - scope_context
+    - gov_partnership_programs
+    - platform_governance
+    - talent_labor_pipeline
+    - ai_stack_compliance
+    - sector_playbooks
+    - economics_finance
+    - risk_stakeholder
+
+  policy-memo:
+    - gov_partnership_programs
+    - risk_stakeholder
+    - talent_labor_pipeline
+    - ai_stack_compliance
+    - scope_context
+
+  remediation:
+    note: 先产出缺陷表并按维度映射 role；不必八帽全跑。
+
+domain_deep_waves:
+  business-plan:
+    - [scope_context]
+    - [gov_partnership_programs, platform_governance]
+    - [talent_labor_pipeline, ai_stack_compliance]
+    - [sector_playbooks, economics_finance]
+    - [risk_stakeholder]
+
+  generate:
+    - [scope_context]
+    - [gov_partnership_programs, platform_governance]
+    - [talent_labor_pipeline, ai_stack_compliance]
+    - [sector_playbooks, economics_finance]
+    - [risk_stakeholder]
+
+  feasibility:
+    - [scope_context]
+    - [gov_partnership_programs]
+    - [platform_governance]
+    - [talent_labor_pipeline, ai_stack_compliance]
+    - [sector_playbooks]
+    - [economics_finance]
+    - [risk_stakeholder]
+
+  due-diligence:
+    - [scope_context]
+    - [gov_partnership_programs, platform_governance]
+    - [talent_labor_pipeline, ai_stack_compliance]
+    - [sector_playbooks]
+    - [economics_finance]
+    - [risk_stakeholder]
+
+  policy-memo:
+    - [gov_partnership_programs, risk_stakeholder]
+    - [talent_labor_pipeline, ai_stack_compliance]
+    - [scope_context]

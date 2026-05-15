@@ -1,0 +1,107 @@
+# 角色执行顺序：built-environment.urban-culture-tourism
+# domain_deep 阶段按 engagement 选用；remediation 仅对缺陷映射到的 role 重跑。
+
+schema_version: 1
+team_id: built-environment.urban-culture-tourism
+
+roles:
+  - id: scope_context
+    title: 范围与目标
+  - id: market_demand
+    title: 市场与需求
+  - id: policy_regulatory
+    title: 政策与手续
+  - id: spatial_program
+    title: 空间与业态
+  - id: operations_commercial
+    title: 运营与商业模式
+  - id: financial_investment
+    title: 财务与投资
+  - id: risk_stakeholder
+    title: 风险与利益相关方（可含社会稳定扩展清单）
+
+engagement_order:
+  business-plan:
+    - scope_context
+    - market_demand
+    - policy_regulatory
+    - spatial_program
+    - operations_commercial
+    - financial_investment
+    - risk_stakeholder
+
+  generate:
+    # 与 business-plan 相同
+    - scope_context
+    - market_demand
+    - policy_regulatory
+    - spatial_program
+    - operations_commercial
+    - financial_investment
+    - risk_stakeholder
+
+  feasibility:
+    - scope_context
+    - policy_regulatory
+    - spatial_program
+    - market_demand
+    - operations_commercial
+    - financial_investment
+    - risk_stakeholder
+
+  due-diligence:
+    - scope_context
+    - market_demand
+    - financial_investment
+    - policy_regulatory
+    - risk_stakeholder
+    - spatial_program
+    - operations_commercial
+
+  policy-memo:
+    - policy_regulatory
+    - risk_stakeholder
+    - market_demand
+    - scope_context
+
+  remediation:
+    note: 先产出缺陷表并按维度映射 role；仅对涉及维度调用对应 prompts，不必七帽全跑。
+
+# domain_deep：每一子列表为一 wave；同 wave 内 role 可并行 sessions_spawn，再 Yield 一次收齐 announce。
+# 单元素 wave = 串行。详见 docs/ORCHESTRATION.md
+domain_deep_waves:
+  business-plan:
+    - [scope_context]
+    - [market_demand, policy_regulatory]
+    - [spatial_program, operations_commercial]
+    - [financial_investment, risk_stakeholder]
+
+  generate:
+    - [scope_context]
+    - [market_demand, policy_regulatory]
+    - [spatial_program, operations_commercial]
+    - [financial_investment, risk_stakeholder]
+
+  feasibility:
+    - [scope_context]
+    - [policy_regulatory]
+    - [spatial_program]
+    - [market_demand]
+    - [operations_commercial]
+    - [financial_investment]
+    - [risk_stakeholder]
+
+  due-diligence:
+    - [scope_context]
+    - [market_demand]
+    - [financial_investment]
+    - [policy_regulatory]
+    - [risk_stakeholder]
+    - [spatial_program]
+    - [operations_commercial]
+
+  policy-memo:
+    - [policy_regulatory]
+    - [risk_stakeholder]
+    - [market_demand]
+    - [scope_context]

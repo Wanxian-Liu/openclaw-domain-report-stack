@@ -1,0 +1,78 @@
+# 章节蓝图：business.professional（通用 B2B / 投融资向）
+# generate 与 business-plan 章节列表一致。
+
+schema_version: 1
+team_id: business.professional
+note: generate 默认映射 business-plan（同一 chapters）
+
+engagements:
+  business-plan:
+    description: 商业计划 / 融资与战略叙事
+    chapters:
+      - 执行摘要
+      - 公司与机会概述
+      - 市场与竞争格局
+      - 产品、服务与差异化
+      - 商业模式与单位经济
+      - 营销、销售与增长
+      - 运营、组织与关键岗位
+      - 财务预测与资金用途
+      - 风险与缓解措施
+      - 结论与里程碑
+
+  generate:
+    description: 与 business-plan 同构（默认映射）
+    chapters:
+      - 执行摘要
+      - 公司与机会概述
+      - 市场与竞争格局
+      - 产品、服务与差异化
+      - 商业模式与单位经济
+      - 营销、销售与增长
+      - 运营、组织与关键岗位
+      - 财务预测与资金用途
+      - 风险与缓解措施
+      - 结论与里程碑
+
+  feasibility:
+    description: 可行性 / 立项论证（偏投资决策）
+    chapters:
+      - 概述与编制依据
+      - 市场机会与需求验证
+      - 解决方案与实施路径
+      - 商业模式与收入逻辑
+      - 投资估算与资金筹措
+      - 财务评价与敏感性
+      - 组织与实施进度
+      - 风险、合规与结论建议
+
+  due-diligence:
+    description: 尽调备忘 / 证据链与挑错
+    chapters:
+      - 范围与假设
+      - 市场与客户验证
+      - 产品与交付能力
+      - 商业、合同与生态
+      - 财务与税务关注点
+      - 合规与治理
+      - 风险矩阵与建议条款
+
+  policy-memo:
+    description: 合规与政策备忘（行业牌照、数据、劳动等）
+    chapters:
+      - 适用法规与标准梳理
+      - 合规义务清单
+      - 差距评估与整改路径
+      - 风险与应对
+      - 结论与待办
+
+  remediation:
+    description: 已有报告研读与改造（见 docs/RUBRIC.md）
+    chapters:
+      - 文档类型与适用范围判定
+      - 执行摘要（结论与风险各 3–5 条，指向完整缺陷表）
+      - 完整缺陷表（P0–P3，条数不限；见 RUBRIC）
+      - 多维评分与门槛说明
+      - 修订计划（按优先级分批）
+      - 修订稿结构说明或修订后正文
+      - 变更说明（逐条对应缺陷 id）

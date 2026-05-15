@@ -1,0 +1,41 @@
+# domain-report-stack — 默认流水线（占位）
+# 阶段键与 CLAUDE.md、state.json 保持一致
+
+schema_version: 1
+pipeline_id: default
+description: 八阶段门禁骨架；具体步骤随团队蓝图扩展
+
+stages:
+  - id: intake
+    description: 资料汇编与 project.meta 校验
+    steps: []
+
+  - id: strategic
+    description: 战略必要性、范围与不做清单
+    steps: []
+
+  - id: adversarial
+    description: 反方质询或 Bull/Bear（可选启用）
+    steps: []
+
+  - id: domain_deep
+    description: 按团队 chapter_blueprint 领域深潜
+    steps: []
+
+  - id: synthesis
+    description: 综合与矛盾消解
+    steps: []
+
+  - id: quality
+    description: 结构化质询与多维评分
+    steps: []
+
+  - id: preflight
+    description: 交付前清单（术语、引用、串台检查）
+    steps: []
+
+  - id: ship
+    description: 中文 Markdown 定稿；可选 docx/pptx 另见后续版本
+    steps: []
+
+# export: TODO — ship 之后可接可插拔导出，见 docs/EXPORT.md 与 scripts/export_placeholder.md

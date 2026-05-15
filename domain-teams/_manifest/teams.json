@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "teams": [
+    {
+      "team_id": "built-environment.urban-culture-tourism",
+      "display_name": "文商旅与城市更新",
+      "search_roots": [
+        "knowledge/built-environment.urban-culture-tourism/"
+      ],
+      "chapter_blueprint_key": "built-environment.urban-culture-tourism"
+    },
+    {
+      "team_id": "digital-culture.ai-native-ip-studio",
+      "display_name": "数字文创 · AI 原生态一人公司与 IP 短剧生态",
+      "search_roots": [
+        "knowledge/digital-culture.ai-native-ip-studio/"
+      ],
+      "chapter_blueprint_key": "digital-culture.ai-native-ip-studio"
+    },
+    {
+      "team_id": "business.professional",
+      "display_name": "专业商业与投融资",
+      "search_roots": [
+        "knowledge/business.professional/"
+      ],
+      "chapter_blueprint_key": "business.professional"
+    },
+    {
+      "team_id": "liaoning.opc-ai-native-incubator",
+      "display_name": "辽宁 · OPC（AI 原生一人公司）政府合作孵化与就业平台",
+      "search_roots": [
+        "knowledge/liaoning.opc-ai-native-incubator/"
+      ],
+      "chapter_blueprint_key": "liaoning.opc-ai-native-incubator"
+    }
+  ]
+}
