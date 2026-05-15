@@ -1,0 +1,3 @@
+# Minimal fixture for CI — team_id must exist in domain-teams/_manifest/teams.json
+team_id: business.professional
+engagement: github-actions-ci

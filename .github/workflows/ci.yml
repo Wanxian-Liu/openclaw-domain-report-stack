@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: domain-report-stack/scripts/requirements.txt
+
+      - name: Install Python dependencies
+        run: pip install -r domain-report-stack/scripts/requirements.txt
+
+      - name: Validate manifest JSON
+        run: python3 -m json.tool domain-teams/_manifest/teams.json > /dev/null
+
+      - name: Parse all skill YAML files
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import yaml
+          root = Path("domain-report-stack")
+          paths = sorted(root.rglob("*.yaml"))
+          assert paths, "no yaml under domain-report-stack"
+          for p in paths:
+              yaml.safe_load(p.read_text(encoding="utf-8"))
+          print(f"OK: parsed {len(paths)} YAML file(s)")
+          PY
+
+      - name: verify_project_meta.py (fixture)
+        env:
+          DRS_TEAMS_MANIFEST: ${{ github.workspace }}/domain-teams/_manifest/teams.json
+        run: |
+          python3 domain-report-stack/scripts/verify_project_meta.py fixtures/ci-sample
