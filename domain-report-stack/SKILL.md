@@ -1,6 +1,6 @@
 ---
 name: domain-report-stack
-version: "0.2.3"
+version: "0.2.4"
 description: |
   domain-report-stack — 多领域专业报告工作流（GStack 式分层门禁）。
   触发词：domain-report-stack、领域报告、专业报告、报告改造、remediation、可研、尽调备忘、商业策划。
