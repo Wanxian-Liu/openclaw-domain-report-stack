@@ -1,6 +1,6 @@
 ---
 name: domain-report-stack
-version: "0.2.4"
+version: "0.2.5"
 description: |
   domain-report-stack — 多领域专业报告工作流（GStack 式分层门禁）。
   触发词：domain-report-stack、领域报告、专业报告、报告改造、remediation、可研、尽调备忘、商业策划。
@@ -37,6 +37,10 @@ description: |
 
 - **ship**：通过 preflight 的**中文 Markdown**（唯一真相源）。
 - **Word / PPT / PDF**：可插拔导出技能，见 **`docs/EXPORT.md`**（不绑定具体厂商）。
+
+## Plan 模式长提示词
+
+各团队、各角色**可独立粘贴到 Cursor Plan** 的完整提示词见 **`docs/plan-prompts/`**（`README.md` + 每角色 `*.plan.md`）；与 `roles/<team>/prompts/*.md` 短提示互补。
 
 ## 与 WV 的关系
 
